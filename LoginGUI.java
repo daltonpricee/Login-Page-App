@@ -16,7 +16,6 @@ public class LoginGUI implements ActionListener {
    private static JLabel success;
    
    public static void main(String[] args) {
-      
       JPanel panel = new JPanel();
       
       //frame methods
@@ -55,26 +54,18 @@ public class LoginGUI implements ActionListener {
       success = new JLabel("");
       success.setBounds(10, 110, 300, 25);
       panel.add(success);
-         
       frame.setVisible(true);  
-   
    }
    
+   //Action listener for proper login.
    public void actionPerformed(ActionEvent e) {
-      
       String user = userText.getText();
       String password = passwordText.getText();
-      
-      
       if (user.equalsIgnoreCase("Dalton") && password.equalsIgnoreCase("price")) {
          success.setText("Login successful!");
       }
       else {
          JOptionPane.showMessageDialog(null, "Incorrect Password!", "Error", JOptionPane.PLAIN_MESSAGE);
-      }
-      
-      
-   }
-   
-   
+      } 
+   } 
 }
